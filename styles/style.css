@@ -8,6 +8,29 @@ html {
   block-size: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+video {
+  width: 100%;
+}
+
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -34,7 +57,7 @@ html {
 .result__video-container {
   position: relative;
   inline-size: 711px;
-  margin: 0 0 11px;
+  margin: 0 0 16px;
 }
 
 .result__video {
@@ -49,7 +72,6 @@ html {
   align-items: center;
   gap: 40px;
 }
-
 
 .search-form__fieldset {
   display: flex;
@@ -120,24 +142,26 @@ html {
 }
 
 .search-form__pseudo-checkbox {
-  display: block;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
   border: 1px solid #FFF;
-  inline-size: 19px;
-  block-size: 19px;
+  width: 19px;
+  height: 19px;
+
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
-  display: block;
-  background-color: #FFF;
-  inline-size: 15px;
-  block-size: 15px;
-  margin: 1px 0 0 1px;
+  display: block; 
+  background-color: #FFF; 
+  inline-size: 15px; 
+  block-size: 15px; 
 }
 
 .button {
   border: 1px solid #FFF;
-  padding: 6px 0;
+  padding: 7px 0;
   color: #FFF;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
@@ -162,34 +186,11 @@ html {
 
 .button:focus-visible {
   outline: 1px solid #FFF;
-  outline-offset: 1px;
+  outline-offset: -2px;
 }
 
 .search-form__submit-button {
   align-self: flex-end;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-video {
-  width: 100%;
 }
 
 .visually-hidden {
@@ -232,13 +233,14 @@ video {
 }
 
 .content__list-item:not(:last-child) {
-  margin: 0 0 34px;
+  margin: 0 0 30px;
 }
 
 .content__card-link {
   display: block;
-  margin: 2px;
+  padding: 2px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .content__card-link:active {
@@ -255,6 +257,7 @@ video {
 
 .content__card-link:focus-visible {
   outline: 1px solid #FFF;
+  outline-offset: -1px;
 }
 
 .content__card-link_current {
